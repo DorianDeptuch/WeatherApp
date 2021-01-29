@@ -1,0 +1,264 @@
+/* background: rgb(63,0,105);
+background: linear-gradient(to right, hsla(200, 100%, 50%, 1) 0%, hsla(200, 100%, 25%, 1); */
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap'); /*'Yusei Magic*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); /*'Montserrat*/
+
+.hide {
+    display: none;
+}
+* {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+body, #outerDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#outerDiv {
+    background: rgba(85, 85, 85, .8);
+    border-radius: 10px;
+    height: 90vh;
+    width: 70vw;
+}
+
+#innerDiv {
+    background: rgba(150, 150, 150, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95%;
+    width: 98%;
+}
+
+#searchDiv {
+    background: rgba(255, 255, 255, 1);
+    height: 7%;
+    width: 97%;
+    align-self: center;
+    margin: 5px;
+}
+
+    input {
+        height: 100%;
+        width: 95%;
+        text-align: center;
+        font-size: 1rem;
+        padding: 0;
+        border: none;
+    }
+        .empty {
+            box-shadow: 0 0 1px 1px inset red;
+        }
+
+    #searchBTN {
+        background: rgba(255, 255, 255, 1);
+        width: 4%;
+        displaY: inline;
+        height: 100%;
+        border: 0;
+        border-left: gray solid 1px;
+        transform: translateY(-1px);
+    }
+
+#mainInfo {
+    background: rgba(200, 200, 200, 1);
+    height: 50%;
+    width: 97%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+    #left {
+        height: 100%;
+        width: 35%;
+    }
+
+    #timeAndBtnDiv {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content:left;
+        align-items: center;
+        height: 10%;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    #celcFahr {
+        border: none;
+        transform: translateY(5px);
+        background: rgba(85, 85, 85, .8);
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+    }
+    
+    .card {
+        display: flex;
+        flex-direction: column;
+        background: rgb(255, 255, 255);
+        height: fit-content;
+        width: 100%;
+        margin: 10px;
+        border-radius: 10px;
+    }
+    .card > div {
+        height:fit-content !important;
+        background: rgba(85, 85, 85, .8);
+        color: white;
+        font-size: 1.4rem;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    #tempDiv {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+        .date {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            height: 10%;
+        }
+
+        .city {
+            border: solid rgb(200, 200, 200) 1px;
+            height: 40%;
+        }
+        
+        .currentTemp {
+            border: solid rgb(200, 200, 200) 1px;
+            height: 20%;
+        }
+
+        #highLow {
+            display: flex;
+            flex-direction: row;
+            border: solid rgb(200, 200, 200) 1px;
+            height:fit-content;
+            flex-wrap: no-wrap;
+        }
+
+            .lowTemp {
+                border: solid rgb(200, 200, 200) 1px;
+                height: 100%;
+                width: 50%;
+            }
+            
+            .highTemp {
+                border: solid rgb(200, 200, 200) 1px;
+                height: 100%;
+                width: 50%;
+
+            }
+
+        .wind {
+            border: solid rgb(200, 200, 200) 1px;
+            /* height: 15%; */
+            height:fit-content;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+            .arrow {
+                font-size: 2rem;
+                padding-left: 5px;
+                display: inline-block;
+            }
+    #imgDiv{
+        height: 95%;
+        width: 60%;
+    }
+    #imgDiv > img {
+        height: 100%;
+        margin: 10px;
+        border: solid red 1px;
+    }
+
+#additionalInfo {
+    background: rgba(200, 200, 200, 1);
+    height: 30%;
+    width: 97%;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.slide{
+    background:rgba(85, 85, 85, .8);
+    border-radius: 10px;
+    height: 100%;
+    width: 20%;
+    margin: 1px;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoTile {
+    margin: 5px 0px 5px 0px;
+    display: flex;
+    flex-direction: column;
+}
+.slide > div {
+    width: 100%;
+}
+
+    /* .description{
+        width: 100%;
+        height: 30%;
+    }
+    .sunrise{
+        width: 50%;
+        height: 20%;
+    }
+    .sunset{
+        width: 50%;
+        height: 20%;
+    }
+    .feelsLike{
+        width: 20%;
+        height: 30%;
+    }
+    .humidity{
+        width: 20%;
+        height: 30%;
+    }
+    .visibility{
+        width: 20%;
+        height: 30%;
+    }
+    .cloudiness{
+        width: 20%;
+        height: 30%;
+    }
+    .pressure{
+        width: 20%;
+        height: 30%;
+    } */
+    .currentTime{
+        height: 10%;
+        width: 100%;
+        align-self: center;
+    }
+
+/* #misc {
+    display: flex;
+    flex-direction: row;
+} */

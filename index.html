@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/style.css" rel="stylesheet">
+    <title>Weather App</title>
+</head>
+<body>
+    <div id="outerDiv">
+        <div id="innerDiv">
+            <div id="searchDiv">
+                <input id="search" placeholder="Enter city name or ZIP code...">
+                <button id="searchBTN">&#128269;</button>
+                
+            </div>
+            <div id="mainInfo">
+                <div id="left">
+                    <div id="timeAndBtnDiv">
+                        <div id="currentTime" class="infoTile currentTime"></div>
+                        <button id="celcFahr" disabled="true">Viewing in Fahrenheit</button>
+                    </div>
+
+                    <div id="today" class="card">
+                        <div id="date" class="date"> 12/23</div>
+                        <div id="city" class="city"></div>
+
+                        <div id="" class="tempDiv currentTemp">
+                            Current Temperature:
+                            <div class="wrapper">
+                                <div id="currentTemp"></div>
+                                <div class="degreeSymbol">°</div>
+                            </div>
+                        </div>
+
+                        <div id="highLow">
+
+                            <div id="" class="tempDiv lowTemp">
+                                Low:
+                                <div class="wrapper">
+                                    <div id="lowTemp"></div>
+                                    <div class="degreeSymbol">°</div>
+                                </div>
+                            </div>
+
+                            <div id="" class="tempDiv highTemp">
+                                High:
+                                <div class="wrapper">
+                                    <div id="highTemp"></div>
+                                    <div class="degreeSymbol">°</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="wind" class="wind">Wind:</div>
+                    </div>
+                </div>
+                <!-- <div style="width: 600px"> -->
+                    <!-- <iframe class=""
+                            id="googleMaps"
+                            width="100%" 
+                            height="600" 
+                            frameborder="0" 
+                            scrolling="no" 
+                            marginheight="0" 
+                            marginwidth="0" 
+                            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=san%20diego,%20ca+()&amp;t=p&amp;z=9&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                    </iframe> -->
+                <!-- </div> -->
+                <div id="imgDiv">
+                    <img id="weatherImg" src="">
+                </div>
+                
+            </div>
+
+            <div id="additionalInfo">
+                <div id="slide0" class="slide">
+                    <div id="" class="infoTile description">
+                        Description:
+                        <div id="description"></div>
+                    </div>
+                </div>
+                <div id="slide1" class="slide">
+                    <div id="" class="infoTile visibility">
+                        Visibility:
+                        <div id="visibility"></div>
+                    </div>
+                    <div id="" class="infoTile cloudiness">
+                        Cloudiness:
+                        <div id="cloudiness"></div>
+                     </div>
+                </div>
+                <div id="slide2" class="slide">
+                    <div id="" class="infoTile sunset">
+                        Sunset:
+                        <div id="sunset"></div>
+                    </div>
+                    <div id="" class="infoTile sunrise">
+                        Sunrise:
+                        <div id="sunrise"></div>
+                    </div>
+                </div>
+                <div id="slide3" class="slide">
+                    <div id="" class="infoTile feelsLike">
+                        Feels like:
+                        <div class="wrapper">
+                            <div id="feelsLike"></div>
+                            <div class="degreeSymbol">°</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="slide4" class="slide">
+                    <div id="" class="infoTile humidity">
+                        Humidity:
+                        <div id="humidity"></div>
+                    </div>
+                    <div id="" class="infoTile pressure">
+                        Pressure:
+                        <div id="pressure"></div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- <div id="misc"> -->
+                <!-- <div>Powered by:</div>
+                <div><a href=#>GitHub</a></div>
+                <div><a href=#>LinkedIn</a></div>
+            </div> -->
+
+        </div>
+    </div>
+</body>
+<script src="./src/index.js"></script>
+</html>
