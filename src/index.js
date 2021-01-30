@@ -85,6 +85,41 @@ async function updateDOM(input){
   // currentTime.textContent = `Local Time: ${msToTime((now - input.timezone))}`
   console.log(input);
 
+  backgroundImage();
+  mainImage();
+}
+
+function mainImage(){
+  if (description.textContent.match(/light snow/i)){
+    weatherImg.src = 'https://images.unsplash.com/photo-1524690785235-c58c8de27e2b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjN8fHNub3dpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60';
+  } else if (description.textContent.match(/snow/i)){
+    weatherImg.src = 'https://images.unsplash.com/photo-1542601098-8fc114e148e2';
+  } else if (description.textContent.match(/heavy snow/i)){
+      weatherImg.src = 'https://images.unsplash.com/photo-1444384851176-6e23071c6127?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjJ8fGhlYXZ5JTIwcmFpbnxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=500&q=60';
+  } else if (description.textContent.match(/few clouds/i)){
+    weatherImg.src = 'https://images.unsplash.com/photo-1517758478390-c89333af4642';
+  } else if (description.textContent.match(/scattered clouds/i)){
+    weatherImg.src = 'https://images.unsplash.com/photo-1592210454359-9043f067919b';
+  } else if (description.textContent.match(/broken clouds/i)){
+    weatherImg.src = 'https://images.unsplash.com/photo-1469365556835-3da3db4c253b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjl8fGNsb3Vkc3xlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=500&q=60';
+  } else if (description.textContent.match(/overcast clouds/i)){
+    weatherImg.src = 'https://images.unsplash.com/photo-1525920980995-f8a382bf42c5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTV8fG92ZXJjYXN0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60';
+  } else if (description.textContent.match(/mist/i)){
+    weatherImg.src = 'https://images.unsplash.com/photo-1524252500348-1bb07b83f3be?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDJ8fGZvZ3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60';
+  } else if (description.textContent.match(/light rain/i)){
+    weatherImg.src = 'https://images.unsplash.com/photo-1486016006115-74a41448aea2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTl8fGxpZ2h0JTIwcmFpbnxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=500&q=60';
+  } else if (description.textContent.match(/heavy rain/i)){
+    weatherImg.src = 'https://images.unsplash.com/photo-1591430706809-a4936334a714?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8aGVhdnklMjByYWlufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60';
+  } else if (description.textContent.match(/clear sky/i)){
+    weatherImg.src = 'https://images.unsplash.com/photo-1518717202715-9fa9d099f58a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fGJsdWUlMjBza3l8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60';
+  } else if (description.textContent.match(/light wind/i)){
+    weatherImg.src = 'https://images.unsplash.com/12/barley.jpg?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzN8fHdpbmR8ZW58MHx8MHw%3D&auto=format&fit=crop&w=500&q=60';
+  } else if (description.textContent.match(/heavy wind/i)){
+    weatherImg.src = 'https://images.unsplash.com/photo-1470176519524-3c2f481c8c9c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8d2luZHl8ZW58MHx8MHw%3D&auto=format&fit=crop&w=500&q=60';
+  }
+}
+
+function backgroundImage(){
   if (description.textContent.match(/snow/i)){
     document.body.style.backgroundImage = 'url("https://images.unsplash.com/photo-1547754980-3df97fed72a8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzR8fHNub3d8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60")';
   } else if (description.textContent.match(/clouds/i)){
@@ -102,25 +137,6 @@ let visibilityFunc = function(number){
 
   return kilometers;
 }
-
-function convertMS( milliseconds ) {
-  let day, hour, minute, seconds;
-  seconds = Math.floor(milliseconds / 1000);
-  minute = Math.floor(seconds / 60);
-  seconds = seconds % 60;
-  hour = Math.floor(minute / 60);
-  minute = minute % 60;
-  day = Math.floor(hour / 24);
-  hour = hour % 24;
-  return {
-      day: day,
-      hour: hour,
-      minute: minute,
-      seconds: seconds
-  };
-}
-
-
 
 let windDirection = function(deg) {
   
@@ -157,6 +173,11 @@ let windDirection = function(deg) {
     } else if (deg >= 326 && deg <= 345){ 
         return 'NNW';
   }
+}
+
+function convertMS(unixTime) {
+  const dateObject = new Date((unixTime * 1000));
+  return dateObject.toLocaleString('en-US', {timeZoneName: "short"}).slice(11); //.slice(11, -4) for removing PST
 }
 
 let convertTime = function(data){
@@ -208,6 +229,9 @@ function conversion(){
   }
 }
 
+search.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') submitSearch();
+});
 searchBTN.onclick = submitSearch;
 searchBTN.ontouch = submitSearch;
 celcFahr.onclick = conversion;
@@ -216,6 +240,10 @@ setInterval(convertTime,1000);
 /* TO DO
 
 add carousel (optional)
-get local time to work correctly (use UTC and timezones from object.json)
+get local time to work correctly (use UTC and convertTime() take a parameter of timezone from object.json),
+then cancel the setinterval and run a new setinterval of convertTime(-timezone);
+
+for convertMS, possibly take a second parameter as the timezone, then subtract the timezone from unix time???
 error handling for wrong city names
+add more images for different types of weather
 */
